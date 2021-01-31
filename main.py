@@ -32,6 +32,7 @@ def get_twitch_request() -> bool:
 
     return response.json()['data'][0]['type'] == 'live'
 
+
 async def on_start(x):
     asyncio.create_task(check_stream(5))
 
