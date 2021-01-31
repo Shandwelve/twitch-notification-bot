@@ -10,11 +10,6 @@ dispatcher = Dispatcher(bot)
 stream_start = False
 
 
-@dispatcher.message_handler(commands=['start'])
-async def replay_to_user(message: types.Message):
-    await message.reply(message.text)
-
-
 async def check_stream(wait_for: int):
     global stream_start
     while True:
